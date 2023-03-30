@@ -17,14 +17,14 @@ const App = () => {
   return (
     <div>
     <select value={gender} onChange={handleClick} >
-      <option value='male' default={male}>Male</option>
+      <option value='male'>Male</option>
       <option value='female'>Female</option>
     </select>
     <div>
     <ul>
-     {gender==="male" && Object.keys(male).map((item)=>(
+     {gender==="male" && Object.keys(male).map((key)=>(
      
-                   <li key={item}>{male[item]}</li>
+                   <li key={key}>{male[key]}</li>
                    
      ))}
      {gender==="female" && Object.keys(female).map((key)=>(
@@ -33,8 +33,9 @@ const App = () => {
 
     </ul>
     </div>
-                  <hr/>
+    <hr/>      
     </div>
+    
   );
 };
 
